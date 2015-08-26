@@ -38,7 +38,7 @@ myScratchTerminal = "terminator"
 -- Workspaces
 -- The default number of workspaces (virtual screens) and their names.
 --
-myWorkspaces = ["1:term","2:web","3:code","4:chats","5:media"] ++ map show [6..9]
+myWorkspaces = ["1:term","2:web","3:code","4:skype","5:media","6:chats","7:vm"] ++ map show [7..9]
 
 ------------------------------------------------------------------------
 -- Make non-active windows transparent
@@ -69,14 +69,14 @@ myFadeInactiveHook = fadeInactiveLogHook' 0.9
 myManageHook = composeAll
     [ className =? "Firefox"                --> doShift "2:web"
     , className =? "Chromium"               --> doShift "2:web"
-    , className =? "Google-chrome-stable"   --> doShift "2:web"
     , resource  =? "desktop_window"         --> doIgnore
     , className =? "Galculator"             --> doFloat
     , className =? "Steam"                  --> doFloat
     , className =? "Gimp"                   --> doFloat
-    , className =? "Skype"                  --> doShift "4:chats"
+    , className =? "Skype"                  --> doShift "4:skype"
+    , title     =? "Irssi"                  --> doShift "6:chats"
     , className =? "Vlc"                    --> doShift "5:media"
-    , className =? "VirtualBox"             --> doShift "9:"
+    , className =? "VirtualBox"             --> doShift "7:vm"
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
 
 
