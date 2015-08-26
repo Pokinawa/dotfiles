@@ -15,7 +15,7 @@ sh ~/.fehbg &
 # Start X composite manager
 exec compton &
 
-# Start 3 terminals
+# Start 3 normal terminals
 terminator &
 terminator &
 terminator &
@@ -25,6 +25,9 @@ chromium &
 
 # Start Skype
 skype &
+
+# Start irssi in terminal
+terminator -T Irssi -e irssi &
 
 # Start screensaver
 # Kill gnome-screensaver if started by default
