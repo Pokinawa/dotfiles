@@ -1,0 +1,39 @@
+[global_config]
+  geometry_hinting = False
+  enabled_plugins = InactivityWatch, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  inactive_color_offset = 0.92
+  borderless = True
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#120118:#cc0000:#7df812:#c4a000:#a4d00e:#ad2ac3:#06989a:#d3d7cf:#0f071d:#ef2929:#7b7cd7:#fce94f:#12f889:#d729c4:#34e2e2:#eeeeec"
+    background_image = None
+    background_darkness = 0.86
+    use_system_font = False
+    cursor_color = "#00b2ff"
+    foreground_color = "#00fdfb"
+    show_titlebar = False
+    font = Liberation Mono for Powerline 9
+    background_color = "#021217"
+    scrollback_infinite = True
+  [[Old]]
+    scrollbar_position = hidden
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#ff0000:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
+    background_image = None
+    background_darkness = 0.85
+    use_system_font = False
+    icon_bell = False
+    show_titlebar = False
+    font = Liberation Mono for Powerline 9
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
