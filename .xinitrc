@@ -15,6 +15,10 @@ sh ~/.fehbg &
 # Start X composite manager
 exec compton &
 
+# Rebind CAPS as Escape
+xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
+xmodmap -e 'keycode 0x42=Escape' #remaps the keyboard so CAPS LOCK=ESC
+
 # Start 3 normal terminals
 terminator &
 terminator &
@@ -27,7 +31,7 @@ chromium &
 skype &
 
 # Start irssi in terminal
-terminator -T Irssi -e irssi &
+terminator -T Irssi -e irssi -p Old &
 
 # Start screensaver
 # Kill gnome-screensaver if started by default
