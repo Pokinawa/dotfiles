@@ -368,3 +368,4 @@ settings = {
     awl_viewer = "no";
   };
 };
+hilights = ( { text = "Pokinawa"; nick = "yes"; word = "yes"; } );
