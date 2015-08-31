@@ -30,9 +30,11 @@ Config {
                   ["-L", "20", "-H", "50", "-m", "1", "-p", "3"
                   ,"--normal", "yellow", "--high", "red"
                   ,"--low", "green"] 20,
+        Run CoreTemp ["-t", "<icon=/home/anuj/.xmonad/icons/temp.xbm/> <core0>|<core1>|<core2>|<core3>C"
+                     ,"-L", "40", "-H", "60","-l", "lightblue", "-n", "gray90", "-h", "red"] 50,
         Run StdinReader
     ],
     sepChar = "%",
     alignSep = "}{",
-    template = "%StdinReader% }{ %battery%   %disku%   %multicpu%   %memory%   %enp4s0%   %EGSC%   <fc=#FFFFCC>%date%</fc>"
+    template = "%StdinReader% }{ %battery%   %disku%   %coretemp%   %multicpu%   %memory%   %enp4s0%   %EGSC%   <fc=#FFFFCC>%date%</fc>"
 }
