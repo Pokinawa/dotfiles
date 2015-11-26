@@ -45,7 +45,7 @@ myWorkspaces = ["1:term","2:web","3:code","4:skype","5:media","6:chats","7:vm"] 
 --
 fadeInactiveLogHook' = fadeOutLogHook . fadeIf (isUnfocused <&&>
 	(className /=? "google-chrome-stable") <&&>
-	(className /=? "Chromium") <&&>
+	(className /=? "chromium") <&&>
 	(className /=? "Firefox") <&&>
 	(className /=? "Skype") <&&>
     (className /=? "VirtualBox"))
@@ -68,7 +68,7 @@ myFadeInactiveHook = fadeInactiveLogHook' 0.9
 --
 myManageHook = composeAll
     [ className =? "Firefox"                --> doShift "2:web"
-    , className =? "Chromium"               --> doShift "2:web"
+    , className =? "chromium"               --> doShift "2:web"
     , resource  =? "desktop_window"         --> doIgnore
     , className =? "Galculator"             --> doFloat
     , className =? "Steam"                  --> doFloat
