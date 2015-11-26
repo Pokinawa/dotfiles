@@ -64,7 +64,7 @@ chatnets = {
   };
   Freenode = {
     type = "IRC";
-    autosendcmd = "/msg NickServ identify Gigabyte123;wait 6000";
+    autosendcmd = "/msg NickServ identify <password>;wait 6000";
     max_kicks = "1";
     max_msgs = "4";
     max_whois = "1";
@@ -178,7 +178,7 @@ aliases = {
   UNSET = "set -clear";
   RESET = "set -default";
   UC = "statusbar awl_0 add -before awl_0 -alignment left usercount";
-  nv = "/msg NickServ identify Gigabyte123";
+  nv = "/msg NickServ identify <password>";
 };
 
 statusbar = {
