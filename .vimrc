@@ -1,7 +1,25 @@
-"" pathogen
-call pathogen#infect()
+"" vim-plug manager
+call plug#begin('~/.config/nvim/bundle')
+
+" List of plugins
+Plug 'bling/vim-airline'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'kien/ctrlp.vim'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'tpope/vim-fugitive'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes'
+Plug 'airblade/vim-gitgutter'
+Plug 'tomasr/molokai'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'junegunn/vim-easy-align'
+
+call plug#end()
+
 "" set file type plugin on
 filetype plugin on
+
 "" space/tab substitution, size & autoindent
 set tabstop=4
 set shiftwidth=4
@@ -10,12 +28,15 @@ set expandtab
 set autoindent
 set cindent
 set encoding=utf-8
+
 "" incremental search
 set ignorecase
 set smartcase
 set incsearch
+
 "" highlight search 'hits'
 set hlsearch
+
 "" colorscheme
 set t_Co=256 "" 256 colour mode
 colors molokai
@@ -25,24 +46,34 @@ let g:airline_theme="badwolf"
 ""colors muon
 "" colour column
 "" set colorcolumn=80
+
 set backspace=indent,eol,start
+
 "" cursor position info
 set ruler
+
 "" when inserting a closing parenthesis, briefly flash the closed one
 set showmatch
+
 "" backup directory
 set bdir=~/.vim/bak
+
 "" remap <Leader> to ','; it defaults to '\' which is a pain to reach.
 let mapleader = ","
+
 "" highlight trailing whitespace
 match ErrorMsg '\s\+$'
+
 "" ... and delete it (rws ::= remove whitespace)
 nnoremap <Leader>rws :%s/\s\+$//e<CR>
+
 "" allow j and k keys to move even inside wrapped lines
 map j gj
 map k gk
+
 "" line numbers
 set number
+
 "" syntax highlighting
 syntax on
 
@@ -74,3 +105,4 @@ if !exists('g:airline_symbols')
 let g:ycm_global_ycm_extra_conf = '/home/anuj/.vim/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_key_list_select_completion = ['<Down>']
