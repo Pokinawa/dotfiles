@@ -12,7 +12,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tomasr/molokai'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python2 ./install.py --clang-completer' }
 Plug 'junegunn/vim-easy-align'
 
 call plug#end()
